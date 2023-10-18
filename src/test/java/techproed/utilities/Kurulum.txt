@@ -1,0 +1,15 @@
+Cucumber projesi oluşturulurken;
+   1-selenium-java,webDriverManager,cucumber-java ve cucumber-junit(versionlar aynı olacak) dependency'leri
+   pom.xml dosyasına yükleriz
+   2-file>settings>plugins>marketplace bölümünden cucumber for java ve gherkin pluginlerini yükleriz
+   3-test package'ı altında resources package'ı oluştururuz. Bu package altında da features isminde bir
+   package oluşturup .feature uzantılı dosyalarımızı bu package altında oluştururuz
+   4-java package'ı altında 4 tane package oluştururuz
+        a-pages--> Locate'ler için
+        b-utilities--> Driver,ConfigReader ve reusableMethods classlarını bu package'a koyarız
+        c-stepDefinitions-->Bu package altında feature file da yazdığımız steplerin methodlarını oluştururuz
+        d-runners --> Bu package altında Runner isminde bir class oluştururuz. Bu class sayesinde istediğimiz
+        scenario ları tek bir yerden çalıştırabilir raporlar alabiliriz
+   5-Proje seviyesinden configuration.properties dosyamızı oluştururuz
+   6-.feature uzantili dosyamızda yazdığımız ve her step için methodlarımızı oluşturduktan sonra scenario ları
+   run etmeden önce ctrl+f9 yada built buttonuna tıkladıktan sonra scenario ları run edebiliriz.
